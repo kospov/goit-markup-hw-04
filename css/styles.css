@@ -335,7 +335,7 @@ address {
     height: 44px;
     border-radius: 50%;
 
-    background-color:var(--bg-primary-color);
+    fill:var(--bg-primary-color);
 
     list-style: none;
 }
@@ -359,8 +359,6 @@ address {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
     fill: var(--icon-color);
 }
 
@@ -370,7 +368,7 @@ address {
     background-color: var(--accent);
 }
 
-/* УТОЧНИТЬ: ПОЧЕМУ в ФУТЕРЕ работает только стили в конце данного файла 
+/* УТОЧНИТЬ: ПОЧЕМУ в ФУТЕРЕ работают только стили в конце данного файла 
 
 
 .social-item:hover,
@@ -443,14 +441,16 @@ address {
     
 }
 
-.item.clients:hover .icon.clients,
-.item.clients:focus .icon.clients {
+.link.clients:hover .icon.clients,
+.link.clients:focus .icon.clients {
     fill: var(--accent);
 }
 
-.item.clients:hover,
-.item.clients:focus{
-    border: 1px solid var(--accent);
+.link.clients:hover,
+.link.clients:focus {
+    border: 3px solid var(--accent);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
 }
 
 /* FILTER */
@@ -611,6 +611,10 @@ address {
 
 .social-footer .social-item {
     background: rgba(255, 255, 255, 0.1);
+}
+
+.social-footer .social-icon {
+   fill: var(--text-additional-color);
 }
 
 .social-item:hover,
