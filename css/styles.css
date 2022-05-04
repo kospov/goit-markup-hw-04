@@ -190,12 +190,8 @@ address {
     margin-right: 10px;
 }
 
-
-
-.contacts-link:hover .contacts-icon,
-.contacts-link:focus .contacts-icon,
-.contacts-link:hover .contacts-text,
-.contacts-link:focus .contacts-text {
+.contacts-link:hover,
+.contacts-link:focus {
     color: var(--accent);
 }
 
@@ -209,6 +205,7 @@ address {
 }
 
 /* HERO */
+
 .hero-outer {
     display: flex;
     justify-content: center;
@@ -334,7 +331,7 @@ address {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-
+    
     fill:var(--bg-primary-color);
 
     list-style: none;
@@ -348,19 +345,29 @@ address {
 .social-link {
     width: 100%;
     height: 100%;
+
+    border-radius: 50%;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
 .social-icon {
-    width: 20px;
-    height: 20px;
+    width: 20px;    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     fill: var(--icon-color);
 }
+
+
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
@@ -368,17 +375,9 @@ address {
     background-color: var(--accent);
 }
 
-/* УТОЧНИТЬ: ПОЧЕМУ в ФУТЕРЕ работают только стили в конце данного файла 
-
-
-.social-item:hover,
-.social-item:focus {
-    background-color: var(--accent);
-} */
-
 /* WORKS */
 
-.section.works {
+.section.works 
     padding-top: 0;
 }
 
@@ -448,7 +447,7 @@ address {
 
 .link.clients:hover,
 .link.clients:focus {
-    border: 3px solid var(--accent);
+    border: 1px solid var(--accent);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 4px;
 }
@@ -482,7 +481,6 @@ address {
     border-radius: 4px;
 }
 
-/* .button.filter:checked, */
 .button.filter:hover,
 .button.filter:focus
 {
@@ -521,7 +519,7 @@ address {
 
 .image-portfolio {
     display: block;
-    width: 370px;
+    width: 100%;
     height: 294px;
 }
 
@@ -561,8 +559,6 @@ address {
     margin-bottom: 20px;
 }
 .footer a {
-    /* display: block;
-    width:145px; */
     margin-bottom: 20px;
     text-decoration: none;
 }
@@ -615,9 +611,4 @@ address {
 
 .social-footer .social-icon {
    fill: var(--text-additional-color);
-}
-
-.social-item:hover,
-.social-item:focus {
-    background-color: var(--accent);
 }
